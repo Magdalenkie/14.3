@@ -16,19 +16,19 @@ public class TaskController {
     public List<TaskDto> getTasks(){
         return new ArrayList<>();
     }
-    @RequestMapping(method = RequestMethod.GET, value = "getTasks")
+    @RequestMapping(method = RequestMethod.GET, value = "getTask")
     public TaskDto getTask(Long taskId){
         return new TaskDto(1L, "test title", "test_content");
     }
-    @RequestMapping(method = RequestMethod.GET, value = "deleteTask")
+    @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
     public void deleteTask(Long taskId){
 
     }
-    @RequestMapping(method = RequestMethod.GET, value = "updateTask")
+    @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
     public TaskDto updateTask(TaskDto taskDto){
         return new TaskDto(1L, "Edit test title", "Test content");
     }
-    @RequestMapping(method = RequestMethod.GET, value = "createTask")
+    @RequestMapping(method = RequestMethod.POST, value = "createTask")
     public void createTask(TaskDto taskDto){
 
     }
